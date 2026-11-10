@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "eduardo.network",
+  "name": "Home network",
+  "version": "0.1.0",
+  "author": "Eduardo Lorenzo",
+  "license": "MIT",
+  "description": "See every device on a MikroTik (RouterOS 7) network and drag them into address ranges to give them fixed IPs and names.",
+  "kinds": ["service", "bar-widget"],
+  "entryPoints": {
+    "service": "Service.qml",
+    "barWidget": "Panel.qml"
+  },
+  "barWidget": {
+    "displayName": "Home network",
+    "description": "Devices on your MikroTik router, sorted into address ranges by drag and drop",
+    "category": "System",
+    "allowMultiple": false,
+    "defaultSection": "right"
+  }
+}

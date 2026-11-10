@@ -1,0 +1,19 @@
+{
+  "router": "http://192.168.88.1",
+  "dhcpServer": "defconf",
+  "pollSeconds": 10,
+  "kickWifi": true,
+  "notify": true,
+  "awayMinutes": 10,
+  "vpnLabel": "the VPN",
+  "aps": [],
+  "lanes": [
+    { "id": "new", "name": "New", "from": "192.168.88.10", "to": "192.168.88.49", "pool": true },
+    { "id": "smart", "name": "Lights & smart", "from": "192.168.88.50", "to": "192.168.88.149" },
+    { "id": "others", "name": "Others", "from": "192.168.88.150", "to": "192.168.88.199" },
+    { "id": "mine", "name": "Mine", "from": "192.168.88.200", "to": "192.168.88.250" }
+  ],
+  "notes": {
+    "AA:BB:CC:DD:EE:FF": "Home Assistant talks to it by IP"
+  }
+}
