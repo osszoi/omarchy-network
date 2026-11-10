@@ -375,7 +375,7 @@ Item {
       request("POST", "system/package/update/check-for-updates", {}, function(okCheck, d0, errCheck) {
         request("GET", "system/package/update", null, function(ok, data) {
           var row = Array.isArray(data) ? data[0] : data
-          var status = !okCheck ? (errCheck.indexOf("permission") !== -1 ? "checking needs the 'reboot' policy on the router user" : errCheck) : Logic.cleanText(row && row.status, 60)
+          var status = !okCheck ? (errCheck.indexOf("permission") !== -1 ? "checking needs the 'policy' permission (full admin), check in WebFig instead" : errCheck) : Logic.cleanText(row && row.status, 60)
           u[r.url] = ok && row ? {
             name: r.name,
             installed: Logic.cleanText(row["installed-version"], 24),

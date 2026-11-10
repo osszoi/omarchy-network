@@ -33,7 +33,7 @@ Give the plugin its own user, limited to your PC's address:
 /user add name=omarchy-network group=omarchy-network address=<your PC>/32 password=<long random>
 ```
 
-`www` must be enabled (REST API at `http://router/rest`). RouterOS policies aren't per menu, so this user can change any setting: that's why it only works from one address. Checking for updates also needs `reboot` in the group policy; leave it out if you'd rather not.
+`www` must be enabled (REST API at `http://router/rest`). RouterOS policies aren't per menu, so this user can change any setting: that's why it only works from one address. Checking for updates needs the `policy` permission, which also lets the login create users and change passwords (full admin). Leave it out and check updates in WebFig.
 
 Access points listed under `aps` need the same user (it uses one netrc entry per host).
 
